@@ -156,4 +156,9 @@ public class ArrayDeque<Item> implements Deque<Item> {
             }
         }
     }
+
+    @Override
+    public Item getRecursive(int index) {
+        return get(index);
+    }
 }
