@@ -28,7 +28,7 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
      */
     private static int leftIndex(int i) {
         /* TODO: Your code here! */
-        return 0;
+        return 2 * i;
     }
 
     /**
@@ -36,7 +36,7 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
      */
     private static int rightIndex(int i) {
         /* TODO: Your code here! */
-        return 0;
+        return 2 * i + 1;
     }
 
     /**
@@ -44,7 +44,7 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
      */
     private static int parentIndex(int i) {
         /* TODO: Your code here! */
-        return 0;
+        return i / 2;
     }
 
     /**
@@ -108,7 +108,16 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
         validateSinkSwimArg(index);
 
         /** TODO: Your code here. */
-        return;
+        if (index == 1) {
+            return;
+        }
+        int parentIndex = ArrayHeap.parentIndex(index);
+        if (contents[index].myPriority < contents[parentIndex].myPriority) {
+            swap(index, parentIndex);
+            swim(parentIndex);
+        }
+
+
     }
 
     /**
@@ -119,10 +128,49 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
         validateSinkSwimArg(index);
 
         /** TODO: Your code here. */
-        return;
+        if (2 * index < size) {
+            int leftIndex = ArrayHeap.leftIndex(index);
+            int rightIndex = ArrayHeap.rightIndex(index);
+            if (rightIndex == size) {
+                rightIndex += 1;
+            }
+            int minIndex = min(leftIndex, rightIndex);
+            if (contents[index].myPriority > contents[minIndex].myPriority) {
+                swap(index, minIndex);
+                sink(minIndex);
+            }
+
+        /*
+        int leftIndex = ArrayHeap.leftIndex(index);
+        if (leftIndex >= contents.length) return;
+        int rightIndex = ArrayHeap.rightIndex(index);
+
+        // the last index can't be swap
+        if (leftIndex > size - 1) return; //the index size can't be swap
+
+        if (rightIndex > size - 1) { //the left = size - 1 && right = size;
+            rightIndex += 1;
+        }
+
+        int minIndex = min(leftIndex, rightIndex);
+        if (contents[index].myPriority > contents[minIndex].myPriority) {
+            swap(index, minIndex);
+            sink(minIndex);
+        }*/
+        /*
+        if (2 * index < size) {
+            int leftIndex = ArrayHeap.leftIndex(index);
+            int rightIndex = ArrayHeap.rightIndex(index);
+            int minIndex = min(leftIndex, rightIndex);
+            if (contents[index].myPriority > contents[minIndex].myPriority) {
+                swap(index, minIndex);
+                sink(minIndex);
+        }*/
+
+    }
     }
 
-    /**
+    /*
      * Inserts an item with the given priority value. This is enqueue, or offer.
      * To implement this method, add it to the end of the ArrayList, then swim it.
      */
@@ -134,6 +182,9 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
         }
 
         /* TODO: Your code here! */
+        size += 1;
+        contents[size] = new Node(item, priority);
+        swim(size);
     }
 
     /**
@@ -143,7 +194,7 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
     @Override
     public T peek() {
         /* TODO: Your code here! */
-        return null;
+        return contents[1].myItem;
     }
 
     /**
@@ -158,7 +209,12 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
     @Override
     public T removeMin() {
         /* TODO: Your code here! */
-        return null;
+        swap(size, 1);
+        sink(1);
+        T result = contents[size].myItem;
+        contents[size] = null;
+        size -= 1;
+        return result;
     }
 
     /**
@@ -181,7 +237,13 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
     @Override
     public void changePriority(T item, double priority) {
         /* TODO: Your code here! */
-        return;
+        for (int i = 1; i <= size; i++) {
+            if (contents[i].myItem.equals(item)) {
+                contents[i].myPriority = priority;
+            }
+            swim(i);
+            sink(i);
+        }
     }
 
     /**
