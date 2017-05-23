@@ -16,17 +16,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestMyHashMap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestMyHashMap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab9tester/TestMyHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-995">
-              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="382">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyHashMap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyHashMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab9/MyHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
@@ -47,6 +47,16 @@
                 <element signature="e#4562#4563#0" expanded="true" />
                 <element signature="e#4619#4620#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertRandomSpeedTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab9/InsertRandomSpeedTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1439">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -179,7 +189,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
-  <component name="RunManager" selected="JUnit.TestMyHashMap">
+  <component name="RunManager" selected="JUnit.TestMyHashMap.sanityClearTest">
     <configuration default="false" name="TestMyHashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -194,6 +204,72 @@
       <option name="MAIN_CLASS_NAME" value="lab9tester.TestMyHashMap" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="InsertRandomSpeedTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="lab9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="lab9.InsertRandomSpeedTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="lab9" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="InsertInOrderSpeedTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="lab9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="lab9.InsertInOrderSpeedTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="lab9" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestMyHashMap.sanityClearTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="lab9tester.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="lab9" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="lab9tester" />
+      <option name="MAIN_CLASS_NAME" value="lab9tester.TestMyHashMap" />
+      <option name="METHOD_NAME" value="sanityClearTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -579,12 +655,18 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestMyHashMap" />
+      <item index="1" class="java.lang.String" itemvalue="Application.InsertRandomSpeedTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.InsertInOrderSpeedTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestMyHashMap.sanityClearTest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestMyHashMap" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestMyHashMap.sanityClearTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.InsertInOrderSpeedTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.InsertRandomSpeedTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestMyHashMap" />
       </list>
     </recent_temporary>
   </component>
@@ -599,17 +681,11 @@
       <option name="presentableId" value="Default" />
       <updated>1495480324670</updated>
       <workItem from="1495480326175" duration="404000" />
-      <workItem from="1495480747092" duration="9960000" />
+      <workItem from="1495480747092" duration="10446000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestMyHashMap - 2017.05.22 at 15h 12m 58s.xml">
-      <configuration name="TestMyHashMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestMyHashMap - 2017.05.22 at 15h 13m 06s.xml">
-      <configuration name="TestMyHashMap" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestMyHashMap - 2017.05.22 at 15h 21m 34s.xml">
       <configuration name="TestMyHashMap" configurationId="JUnit" />
     </history-entry>
@@ -634,9 +710,15 @@
     <history-entry file="TestMyHashMap - 2017.05.22 at 15h 36m 57s.xml">
       <configuration name="TestMyHashMap" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestMyHashMap_sanityClearTest - 2017.05.22 at 15h 43m 25s.xml">
+      <configuration name="TestMyHashMap.sanityClearTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMyHashMap_sanityClearTest - 2017.05.22 at 15h 43m 33s.xml">
+      <configuration name="TestMyHashMap.sanityClearTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10364000" />
+    <option name="totallyTimeSpent" value="10850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1503" height="1129" extended-state="0" />
@@ -651,7 +733,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22082931" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22082931" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -682,7 +764,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab9tester/TestMyHashMap.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -715,10 +805,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab9tester/TestMyHashMap.java">
+    <entry file="file://$PROJECT_DIR$/lab9/InsertRandomSpeedTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-995">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="-1439">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -743,6 +833,14 @@
             <element signature="e#4562#4563#0" expanded="true" />
             <element signature="e#4619#4620#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab9tester/TestMyHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
