@@ -34,8 +34,13 @@ public class MergeSort {
     /** Returns a queue of queues that each contain one item from items. */
     private static <Item extends Comparable> Queue<Queue<Item>>
             makeSingleItemQueues(Queue<Item> items) {
-        // Your code here!
-        return null;
+        Queue<Queue<Item>> queueQueue = new Queue<>();
+        for (Item eachItem: items) {
+            Queue<Item> eachQueue = new Queue<Item>();
+            eachQueue.enqueue(eachItem);
+            queueQueue.enqueue(eachQueue);
+        }
+        return queueQueue;
     }
 
     /**
@@ -54,13 +59,41 @@ public class MergeSort {
     private static <Item extends Comparable> Queue<Item> mergeSortedQueues(
             Queue<Item> q1, Queue<Item> q2) {
         // Your code here!
-        return null;
+        Queue<Item> mergeResult = new Queue<>();
+        while (!q1.isEmpty() || !q2.isEmpty()) {
+            Item min = getMin(q1, q2);
+            mergeResult.enqueue(min);
+        }
+        return mergeResult;
     }
 
     /** Returns a Queue that contains the given items sorted from least to greatest. */
     public static <Item extends Comparable> Queue<Item> mergeSort(
             Queue<Item> items) {
         // Your code here!
-        return items;
+        Queue<Queue<Item>> queueQueue = makeSingleItemQueues(items);
+        while(queueQueue.size() != 1) {
+            Queue<Item> q1 = queueQueue.dequeue();
+            Queue<Item> q2 = queueQueue.dequeue();
+            Queue<Item> q12 = mergeSortedQueues(q1, q2);
+            queueQueue.enqueue(q12);
+        }
+        return queueQueue.dequeue();
+    }
+
+
+
+    public static void main(String[] args) {
+        Queue<String> students = new Queue<>();
+        students.enqueue("Alice");
+        students.enqueue("Vanessa");
+        students.enqueue("Ethan");
+        System.out.println("Before mergeSorted: " + students.toString());
+
+
+        Queue<String> studentsSort = MergeSort.mergeSort(students);
+
+        System.out.println("After mergeSorted, the original list: " + students.toString());
+        System.out.println("The sorted list: " + studentsSort.toString());
     }
 }
